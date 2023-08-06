@@ -1,20 +1,22 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-var something = '';
+const path = require('path');
+
 app.use(express.static('public'));
+app.use(express.static('scripts'));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/', (req, res) => {
-    res.sendFile('index.html')
+    res.sendFile(path.join(__dirname, '/public/index.html'))
 })
 
-app.post('/move', (req, res) => {
-    res.send('recieved info')
-    something = res.body.chose;
+app.post('/', function (req, res) {
+    const something = req.body.chose;
     console.log(something);
+    res.send('recieved info')
 })
 
 app.listen(port, () => {
