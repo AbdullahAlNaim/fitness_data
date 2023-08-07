@@ -1,0 +1,33 @@
+body {
+    font-family: sans-serif;
+}
+
+h2 {
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10%;
+    background-color: grey;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 0 10px 0;
+}
+
+form {
+    background-color: grey;
+    margin: 0 auto;
+    margin-top: 2%;
+    width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    height: 400px;
+}
+
+form select,
+form input {
+    margin: 10px;
+    margin-top: 50px;
+    border-radius: 5px;
+    border: 0;
+    padding: 15px;
+}
